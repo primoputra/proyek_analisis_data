@@ -10,7 +10,7 @@ st.set_page_config(page_title="Bike Sharing Dashboard", page_icon="🚲", layout
 # Load data dengan cache agar tidak dibaca ulang saat ganti filter
 @st.cache_data
 def load_data():
-    data = pd.read_csv("main_data.csv")   # Baca file hasil export dari notebook
+    data = pd.read_csv("dashboard/main_data.csv")   # Baca file hasil export dari notebook
     return data
 
 day_df = load_data()
@@ -88,7 +88,7 @@ st.subheader("🕐 Pertanyaan 2: Pola Jam Penggunaan (Casual vs Registered)")
 # Load data per jam dari hour.csv
 @st.cache_data
 def load_hour_data():
-    hour_data = pd.read_csv("../data/hour.csv")
+    hour_data = pd.read_csv("data/hour.csv")
     workingday_map = {0: "Holiday/Weekend", 1: "Working Day"}
     hour_data["workingday"] = hour_data["workingday"].map(workingday_map)
     return hour_data
