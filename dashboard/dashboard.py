@@ -16,7 +16,7 @@ def load_data():
 day_df = load_data()
 
 # ==================== SIDEBAR FILTER ====================
-st.sidebar.title("🚲 Bike Sharing Dashboard")
+st.sidebar.title("Bike Sharing Dashboard")
 st.sidebar.markdown("---")
 
 # Filter musim (bisa pilih lebih dari satu)
@@ -33,7 +33,7 @@ st.sidebar.markdown("---")
 st.sidebar.markdown(f"**Total Data:** {len(filtered_df)} hari")
 
 # ==================== HEADER DASHBOARD ====================
-st.title("🚲 Bike Sharing Dashboard")
+st.title("Bike Sharing Dashboard")
 st.markdown("Analisis penyewaan sepeda berdasarkan musim, cuaca, dan pola penggunaan harian (2011-2012)")
 st.markdown("---")
 
@@ -48,7 +48,7 @@ with col4: st.metric("Penyewa Casual", f"{filtered_df['casual'].sum():,}")
 st.markdown("---")
 
 # ==================== PERTANYAAN 1: MUSIM & CUACA ====================
-st.subheader("📊 Pertanyaan 1: Pengaruh Cuaca dan Musim")
+st.subheader("Pertanyaan 1: Pengaruh Cuaca dan Musim")
 col_left, col_right = st.columns(2)
 
 # Grafik kiri: Bar chart rata-rata penyewaan per musim
@@ -83,7 +83,7 @@ st.pyplot(fig3)
 st.markdown("---")
 
 # ==================== PERTANYAAN 2: POLA JAM ====================
-st.subheader("🕐 Pertanyaan 2: Pola Jam Penggunaan (Casual vs Registered)")
+st.subheader("Pertanyaan 2: Pola Jam Penggunaan (Casual vs Registered)")
 
 # Load data per jam dari hour.csv
 @st.cache_data
@@ -126,7 +126,7 @@ except FileNotFoundError:
 st.markdown("---")
 
 # ==================== ANALISIS LANJUTAN ====================
-st.subheader("🔬 Analisis Lanjutan: Binning Suhu & Clustering")
+st.subheader("Analisis Lanjutan: Binning Suhu & Clustering")
 col_bin, col_clust = st.columns(2)
 
 # Grafik kiri: hasil binning kategori suhu
