@@ -1,23 +1,19 @@
-# Proyek Analisis Data: Bike Sharing Dataset
+# Bike Sharing Dashboard
 
-## Deskripsi Proyek
-Proyek ini menganalisis dataset penyewaan sepeda (Bike Sharing) yang mencatat aktivitas penyewaan sepeda selama tahun 2011–2012. Analisis dilakukan untuk menjawab dua pertanyaan bisnis utama:
-1. Bagaimana pengaruh kondisi cuaca dan musim terhadap jumlah total penyewaan sepeda harian?
-2. Pada jam berapa saja terjadi puncak penggunaan sepeda oleh pengguna casual vs registered pada hari kerja dibandingkan hari libur?
+## Setup Enviroment - Anaconda
+conda create --name main-ds python=3.9
+conda activate main-ds
+pip install -r requirements.txt
 
-## Dataset
-Dataset yang digunakan adalah **Bike Sharing Dataset** yang terdiri dari:
-- `day.csv` — data penyewaan sepeda harian (731 baris)
-- `hour.csv` — data penyewaan sepeda per jam (17.379 baris)
+## Setup  Environment - Shell/Terminal
+mkdir proyek_analisis_data
+cd proyek_analisis_data
+pipenv install
+pipenv shell
+pip install -r requirements.txt
 
-## Tahapan Analisis
-1. **Gathering Data** — memuat dataset day.csv dan hour.csv
-2. **Assessing Data** — mengecek tipe data, missing value, dan duplikasi
-3. **Cleaning Data** — konversi tipe data datetime dan mapping nilai kategorikal
-4. **Exploratory Data Analysis (EDA)** — agregasi dan pivot table untuk menjawab pertanyaan bisnis
-5. **Analisis Lanjutan** — binning suhu dan clustering hari berdasarkan pola penggunaan
-6. **Visualization** — bar chart, heatmap, dan line chart
-7. **Conclusion** — kesimpulan dari kedua pertanyaan bisnis
+## Run Steamlit app
+streamlit run dashboard.py
 
 ## Struktur Folder
 proyek_analisis_data/
@@ -33,20 +29,6 @@ proyek_analisis_data/
 ├── README.md # Dokumentasi proyek
 └── url.txt # Link dashboard
 
-
-## Cara Menjalankan
-1. Clone repository ini
-2. Install dependency: `pip install -r requirements.txt`
-3. Jalankan notebook: `jupyter notebook notebook.ipynb`
-4. Jalankan dashboard: `cd dashboard && streamlit run dashboard.py`
-
-## Teknologi
-- Python 3.x
-- Pandas
-- Matplotlib & Seaborn
-- Streamlit
-
 ## Penulis
 - **Nama:** Primo Putra Ramadhan
 - **Dataset:** Bike Sharing Dataset (Kaggle)
-d
