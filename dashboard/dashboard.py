@@ -54,7 +54,7 @@ col_left, col_right = st.columns(2)
 # Grafik kiri: Bar chart rata-rata penyewaan per musim
 with col_left:
     st.markdown("**Rata-Rata Penyewaan Berdasarkan Musim**")
-    season_avg = filtered_df.groupby("season")["cnt"].mean().sort_values(ascending=False).reset_index()
+    season_avg = filtered_df.groupby("season")["cnt"].sum().sort_values(ascending=False).reset_index()
     fig1, ax1 = plt.subplots(figsize=(8, 5))
     sns.barplot(data=season_avg, x="season", y="cnt", ax=ax1, palette="Set2", hue="season", legend=False)
     ax1.set_xlabel("Musim"); ax1.set_ylabel("Rata-Rata Penyewaan per Hari"); ax1.set_title("Penyewaan Sepeda per Musim")
@@ -64,7 +64,7 @@ with col_left:
 # Grafik kanan: Bar chart rata-rata penyewaan per kondisi cuaca
 with col_right:
     st.markdown("**Rata-Rata Penyewaan Berdasarkan Cuaca**")
-    weather_avg = filtered_df.groupby("weathersit")["cnt"].mean().sort_values(ascending=False).reset_index()
+    weather_avg = filtered_df.groupby("weathersit")["cnt"].sum().sort_values(ascending=False).reset_index()
     fig2, ax2 = plt.subplots(figsize=(8, 5))
     sns.barplot(data=weather_avg, x="weathersit", y="cnt", ax=ax2, palette="coolwarm", hue="weathersit", legend=False)
     ax2.set_xlabel("Kondisi Cuaca"); ax2.set_ylabel("Rata-Rata Penyewaan per Hari"); ax2.set_title("Penyewaan Sepeda per Kondisi Cuaca")
@@ -74,7 +74,7 @@ with col_right:
 
 # Heatmap: silang musim vs cuaca
 st.markdown("**Heatmap: Rata-Rata Penyewaan (Musim vs Cuaca)**")
-pivot_data = filtered_df.pivot_table(index="season", columns="weathersit", values="cnt", aggfunc="mean")
+pivot_data = filtered_df.pivot_table(index="season", columns="weathersit", values="cnt", aggfunc="sum")
 fig3, ax3 = plt.subplots(figsize=(10, 5))
 sns.heatmap(pivot_data, annot=True, fmt=".0f", cmap="YlGnBu", linewidths=0.5, ax=ax3)
 ax3.set_xlabel("Kondisi Cuaca"); ax3.set_ylabel("Musim")
