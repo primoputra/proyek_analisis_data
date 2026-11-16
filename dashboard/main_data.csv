@@ -67,7 +67,7 @@ instant,dteday,season,yr,mnth,holiday,weekday,workingday,weathersit,temp,atemp,h
 66,2011-03-07,Springer,2011,Mar,0,Monday,Working Day,Clear/Partly Cloudy,0.261739,0.238461,0.551304,0.341352,244,1628,1872,4.3017330000000005,Dingin (< 10°C),0.13034188034188035,Low Demand - Registered Dominant
 67,2011-03-08,Springer,2011,Mar,0,Tuesday,Working Day,Clear/Partly Cloudy,0.2925,0.3024,0.420833,0.12065,316,1817,2133,5.747499999999999,Dingin (< 10°C),0.14814814814814814,Low Demand - Registered Dominant
 68,2011-03-09,Springer,2011,Mar,0,Wednesday,Working Day,Mist/Cloudy,0.295833,0.286608,0.775417,0.22015,191,1700,1891,5.904151000000001,Dingin (< 10°C),0.10100475938656796,Low Demand - Registered Dominant
-69,2011-03-10,Springer,2011,Mar,0,Thursday,Working Day,Light Snow/Rain,0.389091,0.385668,0.0,0.261877,46,577,623,10.287277,Sejuk (10-20°C),0.0738362760834671,Low Demand - Registered Dominant
+69,2011-03-10,Springer,2011,Mar,0,Thursday,Working Day,Light Snow/Rain,0.389091,0.385668,0.6270834999999999,0.261877,46,577,623,10.287277,Sejuk (10-20°C),0.0738362760834671,Low Demand - Registered Dominant
 70,2011-03-11,Springer,2011,Mar,0,Friday,Working Day,Mist/Cloudy,0.316522,0.305,0.649565,0.23297,247,1730,1977,6.876534000000001,Dingin (< 10°C),0.12493677288821446,Low Demand - Registered Dominant
 71,2011-03-12,Springer,2011,Mar,0,Saturday,Holiday/Weekend,Clear/Partly Cloudy,0.329167,0.32575,0.594583,0.220775,724,1408,2132,7.470848999999999,Dingin (< 10°C),0.3395872420262664,Low Demand - Casual Dominant
 72,2011-03-13,Springer,2011,Mar,0,Sunday,Holiday/Weekend,Clear/Partly Cloudy,0.384348,0.380091,0.527391,0.270604,982,1435,2417,10.064356,Sejuk (10-20°C),0.4062887877534133,Low Demand - Casual Dominant
